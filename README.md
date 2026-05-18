@@ -1,33 +1,128 @@
 # Xiangyuan (Shawn) Mo — Personal Academic Website
 
-Live at: [https://xiangyuan-mo.github.io](https://xiangyuan-mo.github.io)
+**Live at:** https://xiangyuan-mo.github.io
 
-## Structure
+---
 
-- `index.html` — Home page (about, news, contact)
-- `research.html` — Research papers and projects
-- `assets/style.css` — All styles (fonts, colors, layout)
-- `assets/photo.jpg` — Profile photo
-- `assets/CV_Xiangyuan_Mo.pdf` — CV (update by replacing this file)
-- `_includes/config.html` — Sidebar navigation
-- `_config.yml` — Jekyll config (do not modify)
+## File Structure
 
-## Updating
+```
+xiangyuan-mo.github.io/
+├── index.html          ← Home page (About, News, Contact)
+├── research.html       ← Research papers and projects
+├── cv.html             ← Full CV in text form
+├── assets/
+│   ├── style.css       ← All styles (colors, fonts, layout)
+│   └── photo.jpg       ← Profile photo (left panel)
+└── README.md           ← This file
+```
 
-**To update your CV**: Replace `assets/CV_Xiangyuan_Mo.pdf` with a new version (keep the same filename).
+There is **no Jekyll** — this is pure static HTML. Everything works directly in any browser.
 
-**To add a paper**: Copy a `<div class="paper">...</div>` block in `research.html`.
+---
 
-**To change colors/fonts**: Edit the CSS variables at the top of `assets/style.css`.
+## How to Edit Each Part
 
-**To add a new page**: Create `newpage.html` following the same template, then add a nav link in `_includes/config.html`.
+### Change your photo
+Replace `assets/photo.jpg` with a new file. Keep the filename the same, or update the `src="assets/photo.jpg"` in **all three HTML files** (index, research, cv).
+
+### Edit the About Me text (Home page)
+Open `index.html`. Find the `<section>` under `<h2>About Me</h2>` and edit the `<p>` paragraphs.
+
+### Add a news item
+Open `index.html`. Find `<h2>News</h2>`. Copy one of these blocks and paste it in:
+```html
+<div class="news-item">
+  <span class="news-date">Mon YYYY</span>
+  <span>Your news text here.</span>
+</div>
+```
+
+### Add a research paper
+Open `research.html`. Copy this template into the relevant `<section>`:
+```html
+<div class="paper">
+  <div class="paper-title">Paper Title Here</div>
+  <div class="paper-meta">
+    with Co-Author (Institution) · <em>Working Paper</em>, 2026
+  </div>
+  <div class="paper-abstract">
+    Abstract text here.
+  </div>
+  <div class="paper-links">
+    <a href="URL" target="_blank">PDF</a>
+    <a href="URL" target="_blank">GitHub</a>
+  </div>
+</div>
+```
+
+### Add a CV entry
+Open `cv.html`. Copy this template into the relevant `<section>`:
+```html
+<div class="cv-item">
+  <div class="cv-header">
+    <span class="cv-place">Organization Name — Your Role</span>
+    <span class="cv-date">Month YYYY – Month YYYY</span>
+  </div>
+  <div class="cv-role">Department / Location</div>
+  <ul class="cv-list">
+    <li>Bullet point one</li>
+    <li>Bullet point two</li>
+  </ul>
+</div>
+```
+
+### Add a new page (e.g., teaching.html)
+1. Copy `cv.html` as a starting point, rename it `teaching.html`
+2. Update the page `<title>` tag
+3. In the `<nav class="topnav">` block, add a link:
+   ```html
+   <a href="teaching.html">Teaching</a>
+   ```
+4. Add the same link to the nav bar in **all other HTML files** too (index, research, cv)
+
+### Change colors or fonts
+Open `assets/style.css`. At the very top, edit the `:root` block:
+```css
+:root {
+  --navy:       #1a2744;   /* sidebar/heading color */
+  --gold:       #b8962e;   /* accent color */
+  --cream:      #faf8f4;   /* page background */
+  --photo-w:    280px;     /* width of the left photo panel */
+}
+```
+Font choices are loaded from Google Fonts. To change them, edit the `@import` line at the top of `style.css` and update `font-family` references.
+
+---
 
 ## Local Preview
 
+No build step needed — just open the HTML files in a browser:
+
 ```bash
-gem install bundler jekyll
-bundle init
-bundle add jekyll
-bundle exec jekyll serve
-# → http://localhost:4000
+# Option 1: simplest (double-click index.html in Finder/Explorer)
+open index.html
+
+# Option 2: local server (avoids any CORS quirks)
+python3 -m http.server 8000
+# Then open http://localhost:8000 in your browser
+
+# Option 3: VS Code Live Server extension
+# Install "Live Server" → right-click index.html → Open with Live Server
 ```
+
+---
+
+## Deploying Updates to GitHub Pages
+
+After editing files locally:
+
+```bash
+git add .
+git commit -m "update research page"
+git push origin main
+```
+
+Changes go live at https://xiangyuan-mo.github.io within ~1 minute.
+
+To edit directly on GitHub (no local setup needed): go to the file on GitHub → click the pencil icon → edit → click **Commit changes**.

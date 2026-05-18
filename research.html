@@ -1,153 +1,142 @@
----
-layout: none
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research – Xiangyuan Mo</title>
-  <meta name="description" content="Research by Xiangyuan Mo — empirical corporate finance, institutional investors, credit ratings.">
   <link rel="stylesheet" href="assets/style.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('a[href="research.html"]')?.classList.add('active');
-    });
-  </script>
 </head>
 <body>
 
-{% include config.html %}
+  <div class="photo-panel">
+    <img src="assets/photo.jpg" alt="Xiangyuan Mo">
+  </div>
 
-<main class="content">
+  <div class="right-col">
 
-  <header class="hero">
-    <h1>Research</h1>
-    <p class="hero-subtitle">Empirical Corporate Finance &nbsp;·&nbsp; Institutional Investors &nbsp;·&nbsp; Credit Markets</p>
-  </header>
+    <nav class="topnav">
+      <span class="topnav-name">Xiangyuan (Shawn) Mo</span>
+      <div class="topnav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="cv.html">CV</a>
+      </div>
+    </nav>
 
-  <!-- Working Papers -->
-  <section>
-    <h2>Working Papers</h2>
+    <main class="content">
 
-    <div class="paper">
-      <div class="paper-title">
-        Government Affiliation and Rating Inequality: Uncovering the Corporate Credit Rating Black Box
-      </div>
-      <div class="paper-meta">
-        with Lei Ge (Renmin University of China) &nbsp;·&nbsp; <em>Working Paper</em>, 2025
-      </div>
-      <div class="paper-abstract">
-        We study whether government affiliation confers a systematic credit rating premium using a
-        large panel of ~132,000 firm-quarter observations from WRDS (2000–2025). Our identification
-        strategy combines baseline OLS with firm and time fixed effects, shock-interacted
-        difference-in-differences exploiting the 2008 GFC and COVID-19 as exogenous shocks,
-        a Triple-DID design using pre-shock credit standing as a third dimension, and
-        Double/Debiased Machine Learning with Causal Forest for heterogeneous treatment effects.
-        We find a causal rating premium of approximately 0.38 notches for government-affiliated
-        firms. The effect is amplified post-2008 and reverses for speculative-grade firms during
-        COVID-19, suggesting that affiliation serves as a credibility signal in normal times but
-        a liability signal during systemic stress.
-      </div>
-      <div>
-        <span class="tag">Causal Inference</span>
-        <span class="tag">Difference-in-Differences</span>
-        <span class="tag">Causal Forest</span>
-        <span class="tag">Credit Ratings</span>
-        <span class="tag">State Ownership</span>
-      </div>
-    </div>
+      <header class="hero">
+        <h1>Research</h1>
+        <p class="hero-sub">Empirical Corporate Finance &nbsp;·&nbsp; Institutional Investors &nbsp;·&nbsp; Credit Markets</p>
+      </header>
 
-  </section>
+      <!-- Working Papers -->
+      <section>
+        <h2>Working Papers</h2>
 
-  <!-- Work in Progress -->
-  <section>
-    <h2>Work in Progress</h2>
+        <div class="paper">
+          <div class="paper-title">
+            Government Affiliation and Rating Inequality: Uncovering the Corporate Credit Rating Black Box
+          </div>
+          <div class="paper-meta">
+            with Lei Ge (Renmin University of China) &nbsp;·&nbsp; <em>Working Paper</em>, 2025
+          </div>
+          <div class="paper-abstract">
+            We study whether government affiliation confers a systematic credit rating premium using
+            ~132,000 firm-quarter observations from WRDS (2000–2025). Our identification strategy
+            combines baseline OLS with firm and time fixed effects, shock-interacted
+            difference-in-differences exploiting the 2008 GFC and COVID-19 as exogenous shocks,
+            a Triple-DID using pre-shock credit standing as a third dimension, and Double/Debiased
+            Machine Learning with Causal Forest for heterogeneous treatment effects. We find a
+            causal rating premium of approximately <strong>0.38 notches</strong> for
+            government-affiliated firms. The effect is amplified post-2008 and reverses for
+            speculative-grade firms during COVID-19.
+          </div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">DID</span>
+            <span class="tag">Causal Forest</span>
+            <span class="tag">Credit Ratings</span>
+            <span class="tag">State Ownership</span>
+          </div>
+        </div>
 
-    <div class="paper">
-      <div class="paper-title">
-        Institutional Investor Voting Behavior: Evidence from SEC 13F and N-PX Filings
-      </div>
-      <div class="paper-meta">
-        Research Assistant to <a href="https://faculty.fuqua.duke.edu/~abrav/" target="_blank">Prof. Alon Brav</a> (Duke Fuqua) &nbsp;·&nbsp; <em>In progress</em>, 2025–present
-      </div>
-      <div class="paper-abstract">
-        This project constructs a comprehensive dataset linking institutional investors' portfolio
-        holdings (SEC 13F) with their proxy voting records (SEC N-PX) to analyze the determinants
-        and consequences of institutional voting behavior. The data pipeline integrates Python- and
-        Stata-based matching algorithms across multiple WRDS databases.
-      </div>
-      <div>
-        <span class="tag">Corporate Governance</span>
-        <span class="tag">Proxy Voting</span>
-        <span class="tag">13F / N-PX</span>
-        <span class="tag">WRDS</span>
-      </div>
-    </div>
+      </section>
 
-  </section>
+      <!-- Work in Progress -->
+      <section>
+        <h2>Work in Progress</h2>
 
-  <!-- Other Projects -->
-  <section>
-    <h2>Selected Projects</h2>
+        <div class="paper">
+          <div class="paper-title">
+            Institutional Investor Voting Behavior: Evidence from SEC 13F and N-PX Filings
+          </div>
+          <div class="paper-meta">
+            Research Assistant to
+            <a href="https://faculty.fuqua.duke.edu/~abrav/" target="_blank">Prof. Alon Brav</a>
+            (Duke Fuqua) &nbsp;·&nbsp; <em>In progress</em>, 2025–present
+          </div>
+          <div class="paper-abstract">
+            This project constructs a comprehensive dataset linking institutional investors'
+            portfolio holdings (SEC 13F) with their proxy voting records (SEC N-PX) to analyze
+            the determinants and consequences of institutional voting behavior. The data pipeline
+            integrates Python- and Stata-based matching algorithms across multiple WRDS databases.
+          </div>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Corporate Governance</span>
+            <span class="tag">Proxy Voting</span>
+            <span class="tag">13F / N-PX</span>
+          </div>
+        </div>
 
-    <div class="paper">
-      <div class="paper-title">
-        Nepal Earthquake Damage Grade Prediction
-      </div>
-      <div class="paper-meta">
-        Duke STA-521 (Statistical Learning) &nbsp;·&nbsp; December 2024 &nbsp;·&nbsp;
-        <strong>Best Prediction in Class</strong>
-      </div>
-      <div class="paper-abstract">
-        Built a Geography AutoEncoder compressing 12,568 location categories into 16 learned
-        embedding vectors. Combined with XGBoost and Random Forest ensembles and Optuna
-        hyperparameter tuning, achieved a Quadratic Weighted Kappa of ~0.618 — the highest
-        performance in the class.
-      </div>
-      <div class="paper-links">
-        <a href="https://github.com/xiangyuan-mo/Duke-STA-521-Earthquake-Prediction" target="_blank">GitHub</a>
-      </div>
-    </div>
+      </section>
 
-    <div class="paper">
-      <div class="paper-title">
-        RUC Fintech Hackathon: Housing Price Prediction
-      </div>
-      <div class="paper-meta">
-        RUC Quantitative Modeling Competition &nbsp;·&nbsp; 2024 &nbsp;·&nbsp;
-        <strong>Best Modeling Award</strong>
-      </div>
-      <div class="paper-abstract">
-        Preprocessed raw housing data with Pandas; filled missing values with KNN; used OpenFE
-        for automated deep feature engineering. Stacked OLS, Lasso, Ridge, XGBoost, Random Forest,
-        and Wide Neural Networks (inspired by Cheng et al. 2016); used Optuna for hyperparameter
-        search. Reduced MAE substantially by mixing base models and constructing counterfactual
-        data to mitigate class imbalance.
-      </div>
-      <div class="paper-links">
-        <a href="https://github.com/xiangyuan-mo/RUC-Fintech-Hackathon-2nd-Place-Code" target="_blank">GitHub</a>
-      </div>
-    </div>
+      <!-- Selected Projects -->
+      <section>
+        <h2>Selected Projects</h2>
 
-    <div class="paper">
-      <div class="paper-title">
-        Market Sentiment and Implied Volatility Forecasting
-      </div>
-      <div class="paper-meta">
-        RUC Research Fund &nbsp;·&nbsp; March 2023 – April 2024
-      </div>
-      <div class="paper-abstract">
-        Processed 630,000 text observations from online trader communities to construct
-        investor sentiment indicators using BERT. Predicted implied volatility and set up
-        LSTM models to capture the dynamic relationship between market sentiment and
-        options pricing.
-      </div>
-    </div>
+        <div class="paper">
+          <div class="paper-title">Nepal Earthquake Damage Grade Prediction</div>
+          <div class="paper-meta">
+            Duke STA-521 · December 2024 · <strong>Best Prediction in Class</strong>
+          </div>
+          <div class="paper-abstract">
+            Built a Geography AutoEncoder compressing 12,568 location categories into 16 learned
+            embedding vectors. Combined with XGBoost / Random Forest ensembles and Optuna tuning,
+            achieved QWK ≈ 0.618 — highest in class.
+          </div>
+          <div class="paper-links">
+            <a href="https://github.com/xiangyuan-mo/Duke-STA-521-Earthquake-Prediction" target="_blank">GitHub</a>
+          </div>
+        </div>
 
-  </section>
+        <div class="paper">
+          <div class="paper-title">RUC Fintech Hackathon: Housing Price Prediction</div>
+          <div class="paper-meta">
+            RUC Quantitative Modeling Competition · 2024 · <strong>Best Modeling Award</strong>
+          </div>
+          <div class="paper-abstract">
+            Stacked OLS, Lasso, XGBoost, Random Forest, and Wide Neural Networks with OpenFE
+            deep feature engineering; Optuna hyperparameter search; counterfactual data to
+            address class imbalance.
+          </div>
+          <div class="paper-links">
+            <a href="https://github.com/xiangyuan-mo/RUC-Fintech-Hackathon-2nd-Place-Code" target="_blank">GitHub</a>
+          </div>
+        </div>
 
-</main>
+        <div class="paper">
+          <div class="paper-title">Market Sentiment and Implied Volatility Forecasting</div>
+          <div class="paper-meta">RUC Research Fund · March 2023 – April 2024</div>
+          <div class="paper-abstract">
+            Processed 630,000 text observations from online trader communities to construct
+            investor sentiment indicators using BERT; predicted implied volatility with LSTM models.
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
 
 </body>
 </html>
