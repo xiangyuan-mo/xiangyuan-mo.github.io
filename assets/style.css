@@ -151,6 +151,25 @@ body {
   text-decoration: underline;
 }
 
+.sidebar-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.sidebar-icons a {
+  font-size: 1.4rem;
+  color: var(--navy-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar-icons a:hover {
+  color: var(--navy);
+  text-decoration: none;
+}
+
 /* ── RIGHT CONTENT COLUMN ── */
 .main-col {
   flex: 1;
