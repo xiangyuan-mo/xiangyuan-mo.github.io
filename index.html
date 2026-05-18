@@ -9,33 +9,55 @@
 </head>
 <body>
 
-  <!-- ── LEFT PHOTO PANEL ── -->
-  <div class="photo-panel">
-    <img src="assets/photo.jpg" alt="Xiangyuan Mo">
-  </div>
+  <!-- ── TOP NAV ── -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="active">Home</a>
+      <span class="topnav-sep">|</span>
+      <a href="cv.html">CV</a>
+      <span class="topnav-sep">|</span>
+      <a href="research.html">Research</a>
+    </div>
+  </nav>
 
-  <!-- ── RIGHT COLUMN ── -->
-  <div class="right-col">
+  <!-- ── PAGE LAYOUT ── -->
+  <div class="page-wrap">
 
-    <!-- Top nav -->
-    <nav class="topnav">
-      <span class="topnav-name">Xiangyuan (Shawn) Mo</span>
-      <div class="topnav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
+    <!-- LEFT CARD: photo + info -->
+    <aside class="sidebar-card">
+      <div class="sidebar-photo">
+        <img src="assets/photo.jpg" alt="Xiangyuan Mo">
       </div>
-    </nav>
+      <div class="sidebar-info">
+        <div class="sidebar-name">Xiangyuan (Shawn) Mo</div>
+        <div class="sidebar-row">
+          <div class="sidebar-item">
+            <strong>Affiliation</strong>
+            Duke University, M.A. Economics
+          </div>
+          <div class="sidebar-item">
+            <strong>Email</strong>
+            <a href="mailto:xm89@duke.edu">xm89@duke.edu</a>
+          </div>
+          <div class="sidebar-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/xiangyuan-mo" target="_blank">xiangyuan-mo</a>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <!-- Main content -->
-    <main class="content">
+    <!-- RIGHT COLUMN: content cards -->
+    <div class="main-col">
 
-      <header class="hero">
-        <h1>Xiangyuan (Shawn) Mo</h1>
-        <p class="hero-sub">M.A. in Economics &nbsp;·&nbsp; Duke University &nbsp;·&nbsp; Durham, NC</p>
-      </header>
+      <!-- Hero card -->
+      <div class="card">
+        <h1>Hi, I'm Xiangyuan (Shawn) Mo</h1>
+        <p class="hero-sub">M.A. Economics student at Duke University. Welcome to my website!</p>
+      </div>
 
-      <section>
+      <!-- About card -->
+      <div class="card">
         <h2>About Me</h2>
         <p>
           I am a first-year Master's student in Economics at Duke University (expected May 2027),
@@ -62,49 +84,53 @@
           <span class="tag">Machine Learning</span>
           <span class="tag">Credit Markets</span>
         </div>
-      </section>
+      </div>
 
-      <section>
+      <!-- News card -->
+      <div class="card">
         <h2>News</h2>
-        <div class="news-item">
-          <span class="news-date">May 2026</span>
-          <span>Working paper <em>"Government Affiliation and Rating Inequality"</em> — causal forest estimates confirm ~0.38-notch rating premium for state-affiliated firms.</span>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">May 2026</span>
+            <span>Working paper <em>"Government Affiliation and Rating Inequality"</em> — causal forest estimates confirm ~0.38-notch rating premium for state-affiliated firms.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Aug 2025</span>
+            <span>Joined Duke University as M.A. Economics student; began RA position with Prof. Alon Brav on institutional investor voting behavior.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Dec 2024</span>
+            <span>Best Prediction award in Duke STA-521 for Nepal Earthquake damage classification (QWK ≈ 0.618, best in class).</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Jun 2024</span>
+            <span>Best Modeling Award at the 1st RUC Quantitative Modeling Competition (Fintech Hackathon).</span>
+          </div>
         </div>
-        <div class="news-item">
-          <span class="news-date">Aug 2025</span>
-          <span>Joined Duke University as M.A. Economics student; began RA position with Prof. Alon Brav on institutional investor voting behavior.</span>
-        </div>
-        <div class="news-item">
-          <span class="news-date">Dec 2024</span>
-          <span>Best Prediction award in Duke STA-521 for Nepal Earthquake damage classification (QWK ≈ 0.618, best in class).</span>
-        </div>
-        <div class="news-item">
-          <span class="news-date">Jun 2024</span>
-          <span>Best Modeling Award at the 1st RUC Quantitative Modeling Competition (Fintech Hackathon).</span>
-        </div>
-      </section>
+      </div>
 
-      <section>
-        <h2>Contact</h2>
+      <!-- Contact card -->
+      <div class="card">
+        <h2>Get in Touch</h2>
         <p>I am always happy to discuss research and potential collaborations.</p>
         <div class="contact-row">
           <a href="mailto:xm89@duke.edu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             xm89@duke.edu
           </a>
           <a href="https://github.com/xiangyuan-mo" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
             github.com/xiangyuan-mo
           </a>
           <a href="cv.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Curriculum Vitae
           </a>
         </div>
-      </section>
+      </div>
 
-    </main>
-  </div>
+    </div><!-- /main-col -->
+  </div><!-- /page-wrap -->
 
 </body>
 </html>

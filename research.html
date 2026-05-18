@@ -8,39 +8,55 @@
 </head>
 <body>
 
-  <div class="photo-panel">
-    <img src="assets/photo.jpg" alt="Xiangyuan Mo">
-  </div>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html">Home</a>
+      <span class="topnav-sep">|</span>
+      <a href="cv.html">CV</a>
+      <span class="topnav-sep">|</span>
+      <a href="research.html" class="active">Research</a>
+    </div>
+  </nav>
 
-  <div class="right-col">
+  <div class="page-wrap">
 
-    <nav class="topnav">
-      <span class="topnav-name">Xiangyuan (Shawn) Mo</span>
-      <div class="topnav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="cv.html">CV</a>
+    <aside class="sidebar-card">
+      <div class="sidebar-photo">
+        <img src="assets/photo.jpg" alt="Xiangyuan Mo">
       </div>
-    </nav>
+      <div class="sidebar-info">
+        <div class="sidebar-name">Xiangyuan (Shawn) Mo</div>
+        <div class="sidebar-row">
+          <div class="sidebar-item">
+            <strong>Affiliation</strong>
+            Duke University, M.A. Economics
+          </div>
+          <div class="sidebar-item">
+            <strong>Email</strong>
+            <a href="mailto:xm89@duke.edu">xm89@duke.edu</a>
+          </div>
+          <div class="sidebar-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/xiangyuan-mo" target="_blank">xiangyuan-mo</a>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <main class="content">
+    <div class="main-col">
 
-      <header class="hero">
+      <div class="card">
         <h1>Research</h1>
         <p class="hero-sub">Empirical Corporate Finance &nbsp;·&nbsp; Institutional Investors &nbsp;·&nbsp; Credit Markets</p>
-      </header>
+      </div>
 
       <!-- Working Papers -->
-      <section>
-        <h2>Working Papers</h2>
+      <div class="card">
+        <div class="section-title">Working Papers</div>
 
         <div class="paper">
-          <div class="paper-title">
-            Government Affiliation and Rating Inequality: Uncovering the Corporate Credit Rating Black Box
-          </div>
-          <div class="paper-meta">
-            with Lei Ge (Renmin University of China) &nbsp;·&nbsp; <em>Working Paper</em>, 2025
-          </div>
+          <div class="paper-title">Government Affiliation and Rating Inequality: Uncovering the Corporate Credit Rating Black Box</div>
+          <div class="paper-meta">with Lei Ge (Renmin University of China) &nbsp;·&nbsp; <em>Working Paper</em>, 2025</div>
           <div class="paper-abstract">
             We study whether government affiliation confers a systematic credit rating premium using
             ~132,000 firm-quarter observations from WRDS (2000–2025). Our identification strategy
@@ -52,28 +68,23 @@
             government-affiliated firms. The effect is amplified post-2008 and reverses for
             speculative-grade firms during COVID-19.
           </div>
-          <div class="tags" style="margin-top:8px;">
+          <div class="tags" style="margin-bottom:10px;">
             <span class="tag">DID</span>
             <span class="tag">Causal Forest</span>
             <span class="tag">Credit Ratings</span>
             <span class="tag">State Ownership</span>
           </div>
         </div>
-
-      </section>
+      </div>
 
       <!-- Work in Progress -->
-      <section>
-        <h2>Work in Progress</h2>
+      <div class="card">
+        <div class="section-title">Work in Progress</div>
 
         <div class="paper">
-          <div class="paper-title">
-            Institutional Investor Voting Behavior: Evidence from SEC 13F and N-PX Filings
-          </div>
+          <div class="paper-title">Institutional Investor Voting Behavior: Evidence from SEC 13F and N-PX Filings</div>
           <div class="paper-meta">
-            Research Assistant to
-            <a href="https://faculty.fuqua.duke.edu/~abrav/" target="_blank">Prof. Alon Brav</a>
-            (Duke Fuqua) &nbsp;·&nbsp; <em>In progress</em>, 2025–present
+            Research Assistant to <a href="https://faculty.fuqua.duke.edu/~abrav/" target="_blank">Prof. Alon Brav</a> (Duke Fuqua) &nbsp;·&nbsp; <em>In progress</em>, 2025–present
           </div>
           <div class="paper-abstract">
             This project constructs a comprehensive dataset linking institutional investors'
@@ -81,24 +92,21 @@
             the determinants and consequences of institutional voting behavior. The data pipeline
             integrates Python- and Stata-based matching algorithms across multiple WRDS databases.
           </div>
-          <div class="tags" style="margin-top:8px;">
+          <div class="tags" style="margin-bottom:0;">
             <span class="tag">Corporate Governance</span>
             <span class="tag">Proxy Voting</span>
             <span class="tag">13F / N-PX</span>
           </div>
         </div>
-
-      </section>
+      </div>
 
       <!-- Selected Projects -->
-      <section>
-        <h2>Selected Projects</h2>
+      <div class="card">
+        <div class="section-title">Selected Projects</div>
 
         <div class="paper">
           <div class="paper-title">Nepal Earthquake Damage Grade Prediction</div>
-          <div class="paper-meta">
-            Duke STA-521 · December 2024 · <strong>Best Prediction in Class</strong>
-          </div>
+          <div class="paper-meta">Duke STA-521 · December 2024 · <strong>Best Prediction in Class</strong></div>
           <div class="paper-abstract">
             Built a Geography AutoEncoder compressing 12,568 location categories into 16 learned
             embedding vectors. Combined with XGBoost / Random Forest ensembles and Optuna tuning,
@@ -111,13 +119,10 @@
 
         <div class="paper">
           <div class="paper-title">RUC Fintech Hackathon: Housing Price Prediction</div>
-          <div class="paper-meta">
-            RUC Quantitative Modeling Competition · 2024 · <strong>Best Modeling Award</strong>
-          </div>
+          <div class="paper-meta">RUC Quantitative Modeling Competition · 2024 · <strong>Best Modeling Award</strong></div>
           <div class="paper-abstract">
             Stacked OLS, Lasso, XGBoost, Random Forest, and Wide Neural Networks with OpenFE
-            deep feature engineering; Optuna hyperparameter search; counterfactual data to
-            address class imbalance.
+            deep feature engineering and Optuna hyperparameter search.
           </div>
           <div class="paper-links">
             <a href="https://github.com/xiangyuan-mo/RUC-Fintech-Hackathon-2nd-Place-Code" target="_blank">GitHub</a>
@@ -128,14 +133,14 @@
           <div class="paper-title">Market Sentiment and Implied Volatility Forecasting</div>
           <div class="paper-meta">RUC Research Fund · March 2023 – April 2024</div>
           <div class="paper-abstract">
-            Processed 630,000 text observations from online trader communities to construct
-            investor sentiment indicators using BERT; predicted implied volatility with LSTM models.
+            Processed 630,000 text observations from trader communities; constructed investor
+            sentiment indicators with BERT; predicted implied volatility with LSTM models.
           </div>
         </div>
 
-      </section>
+      </div>
 
-    </main>
+    </div>
   </div>
 
 </body>

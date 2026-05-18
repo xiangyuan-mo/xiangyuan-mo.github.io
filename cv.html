@@ -8,34 +8,51 @@
 </head>
 <body>
 
-  <div class="photo-panel">
-    <img src="assets/photo.jpg" alt="Xiangyuan Mo">
-  </div>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html">Home</a>
+      <span class="topnav-sep">|</span>
+      <a href="cv.html" class="active">CV</a>
+      <span class="topnav-sep">|</span>
+      <a href="research.html">Research</a>
+    </div>
+  </nav>
 
-  <div class="right-col">
+  <div class="page-wrap">
 
-    <nav class="topnav">
-      <span class="topnav-name">Xiangyuan (Shawn) Mo</span>
-      <div class="topnav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html" class="active">CV</a>
+    <aside class="sidebar-card">
+      <div class="sidebar-photo">
+        <img src="assets/photo.jpg" alt="Xiangyuan Mo">
       </div>
-    </nav>
+      <div class="sidebar-info">
+        <div class="sidebar-name">Xiangyuan (Shawn) Mo</div>
+        <div class="sidebar-row">
+          <div class="sidebar-item">
+            <strong>Affiliation</strong>
+            Duke University, M.A. Economics
+          </div>
+          <div class="sidebar-item">
+            <strong>Email</strong>
+            <a href="mailto:xm89@duke.edu">xm89@duke.edu</a>
+          </div>
+          <div class="sidebar-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/xiangyuan-mo" target="_blank">xiangyuan-mo</a>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <main class="content">
+    <div class="main-col">
 
-      <header class="hero">
+      <div class="card">
         <h1>Curriculum Vitae</h1>
-        <p class="hero-sub">
-          xm89@duke.edu &nbsp;·&nbsp; (+1) 919-201-4212 &nbsp;·&nbsp;
-          <a href="https://github.com/xiangyuan-mo" target="_blank">github.com/xiangyuan-mo</a>
-        </p>
-      </header>
+        <p class="hero-sub">xm89@duke.edu &nbsp;·&nbsp; (+1) 919-201-4212 &nbsp;·&nbsp; <a href="https://github.com/xiangyuan-mo" target="_blank">github.com/xiangyuan-mo</a></p>
+      </div>
 
       <!-- Education -->
-      <section>
-        <h2>Education</h2>
+      <div class="card">
+        <div class="section-title">Education</div>
 
         <div class="cv-item">
           <div class="cv-header">
@@ -46,7 +63,7 @@
           <ul class="cv-list">
             <li>GPA: 4.00 / 4.00</li>
             <li>Research Interests: Econometrics, Causal Inference, Empirical Corporate Finance</li>
-            <li>Core Courses: Real Analysis (A+), Econometrics (A+), Predictive Modeling and Statistical Learning (A+)</li>
+            <li>Core Courses: Real Analysis (A+), Econometrics (A+), Statistical Learning (A+)</li>
           </ul>
         </div>
 
@@ -58,7 +75,7 @@
           <div class="cv-role">Bachelor of Economics, Quantitative Economics &nbsp;·&nbsp; Beijing, China</div>
           <ul class="cv-list">
             <li>GPA: 3.80 / 4.00 &nbsp;·&nbsp; 1st Place Scholarship 2024 (out of 174 students)</li>
-            <li>Awards: Best Modeling Award, 1st RUC Fintech Hackathon; National Second Prize, 14th Chinese Mathematics Competition</li>
+            <li>Best Modeling Award, 1st RUC Fintech Hackathon; National Second Prize, 14th Chinese Mathematics Competition</li>
             <li>Skills: Python, Stata, R, Linux, LaTeX; Wind, Bloomberg; ArcGIS</li>
           </ul>
         </div>
@@ -70,11 +87,11 @@
           </div>
           <div class="cv-role">Exchange Program &nbsp;·&nbsp; Davis, CA &nbsp;·&nbsp; GPA: 4.00 / 4.00</div>
         </div>
-      </section>
+      </div>
 
       <!-- Work Experience -->
-      <section>
-        <h2>Work Experience</h2>
+      <div class="card">
+        <div class="section-title">Work Experience</div>
 
         <div class="cv-item">
           <div class="cv-header">
@@ -95,8 +112,8 @@
           </div>
           <div class="cv-role">Shanghai, China</div>
           <ul class="cv-list">
-            <li>Built risk parity and risk budgeting models in Python; validated Dynamic-Nelson-Siegel (DNS) model for Chinese bond market</li>
-            <li>Built neural network and XGBoost models to predict bond interest rates; fine-tuned hyperparameters with Optuna</li>
+            <li>Built risk parity and risk budgeting models; validated Dynamic-Nelson-Siegel model for Chinese bond market</li>
+            <li>Built neural network and XGBoost models to predict bond interest rates; hyperparameter tuning with Optuna</li>
           </ul>
         </div>
 
@@ -108,7 +125,7 @@
           <div class="cv-role">Beijing, China</div>
           <ul class="cv-list">
             <li>Preprocessed CSI-300 data (2010–2023); built Random Forest and XGBoost models to predict stock price fluctuations</li>
-            <li>Assessed factor importance with SHAP; mined deep factors via linear transformations to improve model performance</li>
+            <li>Assessed factor importance with SHAP; mined deep factors via linear transformations</li>
           </ul>
         </div>
 
@@ -119,15 +136,15 @@
           </div>
           <div class="cv-role">AI and Python Programming Course &nbsp;·&nbsp; Beijing, China</div>
           <ul class="cv-list">
-            <li>Guided students in Python packages (Selenium, Scikit-learn, Keras); assisted with grading and course GitHub maintenance</li>
+            <li>Guided students in Python packages (Selenium, Scikit-learn, Keras); grading and GitHub maintenance</li>
             <li>Assisted in writing documentation and LaTeX code for course slides</li>
           </ul>
         </div>
-      </section>
+      </div>
 
-      <!-- Research Experience -->
-      <section>
-        <h2>Research Experience</h2>
+      <!-- Research -->
+      <div class="card">
+        <div class="section-title">Research Experience</div>
 
         <div class="cv-item">
           <div class="cv-header">
@@ -135,7 +152,7 @@
             <span class="cv-date">Mar 2023 – Apr 2024</span>
           </div>
           <ul class="cv-list">
-            <li>Processed 630,000 text records from trader communities; constructed investor sentiment indicators with BERT</li>
+            <li>Processed 630,000 text records; constructed investor sentiment indicators with BERT</li>
             <li>Predicted implied volatility and built LSTM models for market sentiment analysis</li>
           </ul>
         </div>
@@ -146,7 +163,7 @@
             <span class="cv-date">Jan 2024 – Feb 2024</span>
           </div>
           <ul class="cv-list">
-            <li>Processed 200,000+ enterprise records; classified firm types via text recognition and performed data analysis</li>
+            <li>Processed 200,000+ enterprise records; classified firm types via text recognition</li>
           </ul>
         </div>
 
@@ -159,12 +176,12 @@
             <li>Analyzed and cleaned China's real estate big data in Linux; designed automated property data update pipeline</li>
           </ul>
         </div>
-      </section>
+      </div>
 
       <!-- Awards -->
-      <section>
-        <h2>Awards &amp; Honors</h2>
-        <div class="cv-item">
+      <div class="card">
+        <div class="section-title">Awards &amp; Honors</div>
+        <div class="cv-item" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
           <ul class="cv-list">
             <li>Best Prediction, Duke STA-521 "Nepal Earthquake" Project (2024)</li>
             <li>Best Modeling Award, RUC Quantitative Modeling Competition / Fintech Hackathon (2024)</li>
@@ -173,9 +190,9 @@
             <li>2022 Excellent Scholarship, Renmin University of China</li>
           </ul>
         </div>
-      </section>
+      </div>
 
-    </main>
+    </div>
   </div>
 
 </body>
