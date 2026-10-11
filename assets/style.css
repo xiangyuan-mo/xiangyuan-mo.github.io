@@ -20,9 +20,9 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Root size follows the viewport (~18px at 1536px wide, 16px floor, 20px cap),
+/* Root size grows gently with the viewport (~16px at 1536px wide, 15px floor, 18px cap),
    so every rem-based size below scales together with the page width. */
-html { font-size: clamp(16px, 1.17vw, 20px); scroll-behavior: smooth; }
+html { font-size: clamp(15px, calc(9px + 0.45vw), 18px); scroll-behavior: smooth; }
 
 body {
   font-family: 'Source Sans 3', sans-serif;
@@ -193,7 +193,7 @@ body {
 /* ── TYPOGRAPHY ── */
 h1 {
   font-family: 'Lora', serif;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 600;
   color: var(--navy);
   line-height: 1.25;
