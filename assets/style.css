@@ -20,9 +20,9 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Root size grows gently with the viewport (~16px at 1536px wide, 15px floor, 18px cap),
+/* Root size grows gently with the viewport (~15px at 1536px wide, 14px floor, 17px cap),
    so every rem-based size below scales together with the page width. */
-html { font-size: clamp(15px, calc(9px + 0.45vw), 18px); scroll-behavior: smooth; }
+html { font-size: clamp(14px, calc(8px + 0.44vw), 17px); scroll-behavior: smooth; }
 
 body {
   font-family: 'Source Sans 3', sans-serif;
@@ -48,7 +48,7 @@ body {
 
 .topnav-inner a {
   display: inline-block;
-  font-size: 1.12rem;
+  font-size: 1.17rem;
   font-weight: 500;
   color: var(--navy-light);
   text-decoration: none;
@@ -78,7 +78,7 @@ body {
 
 /* ── PAGE WRAPPER ── */
 .page-wrap {
-  max-width: 83rem;
+  max-width: 82rem;
   margin: 0 auto;
   padding: 2.2rem 2rem 5rem;
   display: flex;
@@ -89,7 +89,7 @@ body {
 /* ── LEFT SIDEBAR CARD ── */
 .sidebar-card {
   flex-shrink: 0;
-  width: 16rem;
+  width: 16.8rem;
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -118,7 +118,7 @@ body {
 
 .sidebar-name {
   font-family: 'Lora', serif;
-  font-size: 1.16rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 0.9rem;
@@ -301,7 +301,7 @@ strong { font-weight: 600; }
 
 .paper-title {
   font-family: 'Lora', serif;
-  font-size: 1.18rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 0.35rem;
