@@ -78,7 +78,7 @@ body {
 
 /* ── PAGE WRAPPER ── */
 .page-wrap {
-  max-width: 92rem;
+  max-width: 83rem;
   margin: 0 auto;
   padding: 2.2rem 2rem 5rem;
   display: flex;
@@ -89,7 +89,7 @@ body {
 /* ── LEFT SIDEBAR CARD ── */
 .sidebar-card {
   flex-shrink: 0;
-  width: 16.5rem;
+  width: 16rem;
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -113,12 +113,12 @@ body {
 }
 
 .sidebar-info {
-  padding: 1.3rem 1.3rem 1.5rem;
+  padding: 1.3rem 1.2rem 1.5rem;
 }
 
 .sidebar-name {
   font-family: 'Lora', serif;
-  font-size: 1.24rem;
+  font-size: 1.16rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 0.9rem;
@@ -187,7 +187,7 @@ body {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2.1rem 2.3rem;
+  padding: 2.1rem 2.2rem;
 }
 
 /* ── TYPOGRAPHY ── */
@@ -301,7 +301,7 @@ strong { font-weight: 600; }
 
 .paper-title {
   font-family: 'Lora', serif;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 0.35rem;
