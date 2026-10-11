@@ -19,9 +19,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; }
-@media (min-width: 1400px) { html { font-size: 17px; } }
-@media (min-width: 1800px) { html { font-size: 18px; } }
+
+/* Root size follows the viewport (~18px at 1536px wide, 16px floor, 20px cap),
+   so every rem-based size below scales together with the page width. */
+html { font-size: clamp(16px, 1.17vw, 20px); scroll-behavior: smooth; }
 
 body {
   font-family: 'Source Sans 3', sans-serif;
@@ -47,11 +48,11 @@ body {
 
 .topnav-inner a {
   display: inline-block;
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 500;
   color: var(--navy-light);
   text-decoration: none;
-  padding: 20px 44px;
+  padding: 1.1rem 2.4rem;
   letter-spacing: 0.01em;
   border-bottom: 3px solid transparent;
   transition: all 0.2s;
@@ -77,24 +78,24 @@ body {
 
 /* ── PAGE WRAPPER ── */
 .page-wrap {
-  max-width: 84rem;
+  max-width: 92rem;
   margin: 0 auto;
-  padding: 44px 48px 96px;
+  padding: 2.2rem 2rem 5rem;
   display: flex;
-  gap: 36px;
+  gap: 1.8rem;
   align-items: flex-start;
 }
 
 /* ── LEFT SIDEBAR CARD ── */
 .sidebar-card {
   flex-shrink: 0;
-  width: 19rem;
+  width: 16.5rem;
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
   position: sticky;
-  top: 32px;
+  top: 1.6rem;
 }
 
 .sidebar-photo {
@@ -112,26 +113,26 @@ body {
 }
 
 .sidebar-info {
-  padding: 24px 26px 28px;
+  padding: 1.3rem 1.3rem 1.5rem;
 }
 
 .sidebar-name {
   font-family: 'Lora', serif;
-  font-size: 1.35rem;
+  font-size: 1.24rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 0.9rem;
   line-height: 1.3;
 }
 
 .sidebar-row {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.7rem;
 }
 
 .sidebar-item {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text);
   line-height: 1.5;
 }
@@ -139,7 +140,7 @@ body {
 .sidebar-item strong {
   font-weight: 600;
   display: block;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   color: var(--text);
 }
 
@@ -155,9 +156,9 @@ body {
 
 .sidebar-icons {
   display: flex;
-  gap: 16px;
+  gap: 0.9rem;
   align-items: center;
-  margin-top: 6px;
+  margin-top: 0.3rem;
 }
 
 .sidebar-icons a {
@@ -177,7 +178,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 1.5rem;
   min-width: 0;
 }
 
@@ -186,17 +187,17 @@ body {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 40px 52px;
+  padding: 2.1rem 2.3rem;
 }
 
 /* ── TYPOGRAPHY ── */
 h1 {
   font-family: 'Lora', serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--navy);
   line-height: 1.25;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .hero-sub {
@@ -207,24 +208,24 @@ h1 {
 
 h2 {
   font-family: 'Lora', serif;
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 0.9rem;
 }
 
 h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 0.2rem;
 }
 
 p {
   font-size: 1.08rem;
   line-height: 1.7;
   color: var(--text);
-  margin-bottom: 14px;
+  margin-bottom: 0.75rem;
 }
 
 p:last-child { margin-bottom: 0; }
@@ -235,24 +236,24 @@ a:hover { text-decoration: underline; }
 strong { font-weight: 600; }
 
 /* ── TAGS ── */
-.tags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
 
 .tag {
   background: rgba(42,82,152,0.08);
   color: var(--navy-light);
-  border-radius: 20px;
-  font-size: 0.88rem;
-  padding: 5px 15px;
+  border-radius: 2rem;
+  font-size: 0.92rem;
+  padding: 0.25rem 0.85rem;
   font-weight: 500;
 }
 
 /* ── NEWS ── */
-.news-list { margin-top: 4px; }
+.news-list { margin-top: 0.25rem; }
 
 .news-item {
   display: flex;
-  gap: 20px;
-  padding: 13px 0;
+  gap: 1.2rem;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--border);
   font-size: 1.05rem;
   line-height: 1.6;
@@ -263,25 +264,25 @@ strong { font-weight: 600; }
 .news-date {
   color: var(--gold);
   white-space: nowrap;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
   padding-top: 2px;
-  min-width: 78px;
+  min-width: 4.5rem;
 }
 
 /* ── CONTACT ROW ── */
 .contact-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 12px;
+  gap: 1.3rem;
+  margin-top: 0.75rem;
 }
 
 .contact-row a {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
+  gap: 0.45rem;
+  font-size: 1.02rem;
   color: var(--text-muted);
   transition: color 0.2s;
   text-decoration: none;
@@ -291,8 +292,8 @@ strong { font-weight: 600; }
 
 /* ── RESEARCH PAPERS ── */
 .paper {
-  padding-bottom: 32px;
-  margin-bottom: 32px;
+  padding-bottom: 1.7rem;
+  margin-bottom: 1.7rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -300,36 +301,36 @@ strong { font-weight: 600; }
 
 .paper-title {
   font-family: 'Lora', serif;
-  font-size: 1.28rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 6px;
+  margin-bottom: 0.35rem;
   line-height: 1.4;
 }
 
 .paper-meta {
   font-size: 0.98rem;
   color: var(--text-muted);
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .paper-abstract {
   font-size: 1.05rem;
   color: #555;
   line-height: 1.7;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
-.paper-links { margin-top: 10px; margin-bottom: 4px; }
+.paper-links { margin: 0.6rem 0 0.3rem; }
 
 .paper-links a {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--navy-light);
   border: 1px solid var(--border);
-  padding: 4px 13px;
+  padding: 0.22rem 0.75rem;
   border-radius: 6px;
-  margin-right: 8px;
+  margin-right: 0.45rem;
   display: inline-block;
   transition: all 0.2s;
   text-decoration: none;
@@ -344,8 +345,8 @@ strong { font-weight: 600; }
 
 /* ── CV ITEMS ── */
 .cv-item {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -355,8 +356,8 @@ strong { font-weight: 600; }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 12px;
-  margin-bottom: 4px;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
   flex-wrap: wrap;
 }
 
@@ -367,15 +368,15 @@ strong { font-weight: 600; }
 }
 
 .cv-date {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--text-muted);
   white-space: nowrap;
 }
 
 .cv-role {
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   font-style: italic;
 }
 
@@ -385,12 +386,12 @@ strong { font-weight: 600; }
 }
 
 .cv-list li {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   line-height: 1.6;
   color: var(--text);
-  padding-left: 18px;
+  padding-left: 1.1rem;
   position: relative;
-  margin-bottom: 6px;
+  margin-bottom: 0.35rem;
 }
 
 .cv-list li:last-child { margin-bottom: 0; }
@@ -405,11 +406,11 @@ strong { font-weight: 600; }
 /* ── SECTION HEADING inside card ── */
 .section-title {
   font-family: 'Lora', serif;
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 600;
   color: var(--navy);
-  margin-bottom: 22px;
-  padding-bottom: 12px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.65rem;
   border-bottom: 2px solid var(--border);
 }
 
@@ -423,6 +424,6 @@ strong { font-weight: 600; }
 }
 
 @media (max-width: 480px) {
-  .topnav-inner a { padding: 14px 18px; font-size: 0.95rem; }
+  .topnav-inner a { padding: 14px 18px; font-size: 1rem; }
   .topnav-sep { display: none; }
 }
