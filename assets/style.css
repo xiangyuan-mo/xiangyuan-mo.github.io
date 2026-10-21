@@ -41,6 +41,8 @@ body {
 
 .topnav-inner {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 0;
   padding: 0;
@@ -423,7 +425,7 @@ strong { font-weight: 600; }
   h1 { font-size: 2rem; }
 }
 
-@media (max-width: 480px) {
-  .topnav-inner a { padding: 14px 18px; font-size: 1rem; }
+@media (max-width: 640px) {
+  .topnav-inner a { padding: 14px 12px; font-size: 1rem; }
   .topnav-sep { display: none; }
 }

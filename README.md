@@ -10,7 +10,9 @@
 xiangyuan-mo.github.io/
 ├── index.html          ← Home page (About, News, Contact)
 ├── research.html       ← Research papers and projects
-├── cv.html             ← Full CV in text form
+├── cv.html             ← CV: Education, Honors and Awards
+├── work.html           ← Work Experience
+├── teaching.html       ← Teaching Experience
 ├── assets/
 │   ├── style.css       ← All styles (colors, fonts, layout)
 │   └── photo.jpg       ← Profile photo (left panel)
@@ -24,7 +26,7 @@ There is **no Jekyll** — this is pure static HTML. Everything works directly i
 ## How to Edit Each Part
 
 ### Change your photo
-Replace `assets/photo.jpg` with a new file. Keep the filename the same, or update the `src="assets/photo.jpg"` in **all three HTML files** (index, research, cv).
+Replace `assets/photo.jpg` with a new file. Keep the filename the same, or update the `src="assets/photo.jpg"` in **all HTML files** (index, cv, work, teaching, research).
 
 ### Edit the About Me text (Home page)
 Open `index.html`. Find the `<section>` under `<h2>About Me</h2>` and edit the `<p>` paragraphs.
@@ -57,7 +59,7 @@ Open `research.html`. Copy this template into the relevant `<section>`:
 ```
 
 ### Add a CV entry
-Open `cv.html`. Copy this template into the relevant `<section>`:
+Open `cv.html`, `work.html` or `teaching.html`. Copy this template into the relevant `<section>`:
 ```html
 <div class="cv-item">
   <div class="cv-header">
@@ -72,14 +74,14 @@ Open `cv.html`. Copy this template into the relevant `<section>`:
 </div>
 ```
 
-### Add a new page (e.g., teaching.html)
-1. Copy `cv.html` as a starting point, rename it `teaching.html`
+### Add a new page (e.g., talks.html)
+1. Copy `cv.html` as a starting point, rename it `talks.html`
 2. Update the page `<title>` tag
 3. In the `<nav class="topnav">` block, add a link:
    ```html
-   <a href="teaching.html">Teaching</a>
+   <a href="talks.html">Talks</a>
    ```
-4. Add the same link to the nav bar in **all other HTML files** too (index, research, cv)
+4. Add the same link to the nav bar in **all other HTML files** too (index, cv, work, teaching, research)
 
 ### Change colors or fonts
 Open `assets/style.css`. At the very top, edit the `:root` block:
