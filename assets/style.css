@@ -398,6 +398,14 @@ strong { font-weight: 600; }
 
 .cv-list li:last-child { margin-bottom: 0; }
 
+/* award line with its year right-aligned, matching .cv-header dates */
+.cv-awards li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
 .cv-list li::before {
   content: '–';
   position: absolute;
